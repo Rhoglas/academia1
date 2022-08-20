@@ -413,11 +413,11 @@ footer > .footer-2 {
 .footer-2 form input::placeholder,
 .footer-2 textarea::placeholder {
   text-transform: uppercase;
-  color: var(--cor-3);
+  color: var(--cor-5);
 }
 .footer-2 textarea:focus,
 .footer-2 form input:focus {
-  color: var(--cor-3);
+  color: var(--cor-5);
 }
 .footer-2 textarea::placeholder {
   font-size: 0.95rem;
