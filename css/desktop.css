@@ -1,0 +1,492 @@
+/* =========== Format geral =========== */
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;600;700&family=Koulen&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+}
+:root {
+  --cor-1: #aaff3f;
+  --cor-2: #414141;
+  --cor-3: #ffffff;
+  --cor-4: #000;
+  --cor-5: rgba(0, 0, 0, 0.35);
+
+  font-family: 'Koulen', cursive;
+  font-family: 'Barlow', sans-serif;
+}
+body {
+  background-color: var(--cor-4);
+}
+h1,
+h3,
+p {
+  color: var(--cor-3);
+}
+h1 {
+  text-transform: uppercase;
+  font-family: 'Koulen', cursive;
+}
+h3 {
+  font-family: 'Barlow', sans-serif;
+  font-weight: normal;
+}
+li {
+  color: var(--cor-3);
+}
+/* =========== Format geral =========== */
+
+/* =========== cabeçalho =========== */
+#btn-mobile {
+  display: none;
+}
+
+#header {
+  background-color: var(--cor-5);
+
+  display: flex;
+  position: fixed;
+
+  justify-content: space-between;
+  align-items: center;
+  height: 3.5rem;
+  width: 100%;
+  padding: 0.5rem;
+
+  z-index: 999;
+}
+#logo {
+  /* color: var(--cor-1); */
+  font-weight: 900;
+  text-transform: uppercase;
+}
+#logo > span:nth-child(1) {
+  color: var(--cor-1);
+}
+#logo > span:nth-child(2) {
+  color: var(--cor-3);
+}
+#nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#menu {
+  display: flex;
+  gap: 0.5rem;
+}
+#menu li {
+  float: left;
+}
+
+#menu li a {
+  color: var(--cor-3);
+
+  padding: 0.5rem 0.5rem 0.3rem;
+  position: relative;
+  text-decoration: none;
+  font-weight: 520;
+}
+#menu li a:hover {
+  color: var(--cor-1);
+}
+#menu li a:before {
+  content: '';
+  background: var(--cor-1);
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+#menu li a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+/* =========== cabeçalho =========== */
+/* =========== Inicio =========== */
+.inicio {
+  background: url(../assets/img/inicio.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 3.5rem 2rem 2rem;
+  width: 100%;
+  height: 100vh;
+}
+.inicio .icon0 {
+  display: flex;
+  flex-flow: column;
+  gap: 1rem;
+  background: var(--cor-2);
+  padding: 0.5rem;
+  border-radius: 1rem;
+  border: 2px solid var(--cor-1);
+  justify-content: center;
+  align-items: center;
+}
+.inicio .icon0 a,
+.links > ul li i {
+  font-size: 1.7rem;
+  color: var(--cor-1);
+}
+.inicio .icon0 a {
+  color: var(--cor-1);
+}
+.inicio .icon0 a:hover,
+.links > ul li i:hover {
+  color: var(--cor-3);
+}
+#inicioText {
+  display: flex;
+  flex-flow: column;
+
+  gap: 1.3rem;
+}
+#inicioText h1 {
+  font-size: 4rem;
+  text-shadow: 1px 1px 2px #000;
+}
+#inicioText h3 {
+  font-size: 2rem;
+}
+#inicioText a,
+.sect a {
+  display: block;
+  background-color: var(--cor-1);
+  color: var(--cor-2);
+
+  width: max-content;
+  padding: 0.6rem 2rem;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  font-weight: 501;
+  text-transform: uppercase;
+}
+#inicioText a:hover,
+.sect a:hover {
+  background-color: var(--cor-3);
+}
+/* =========== Inicio =========== */
+/* =========== Sobre =========== */
+.sobre {
+  display: flex;
+
+  justify-content: space-evenly;
+  align-items: center;
+
+  padding: 3.5rem 2rem 2rem;
+  width: 100%;
+  height: 100vh;
+}
+.sobre > section:nth-child(1) {
+  display: flex;
+
+  align-items: center;
+  flex-flow: column;
+  gap: 2rem;
+  padding: 0 3rem 0 0;
+  width: 30%;
+}
+.sobre section > h1,
+.planos section > h1,
+.treinadores > div h1 {
+  border-bottom: 3px solid var(--cor-1);
+}
+.sobre > section:nth-child(2) {
+  width: 70%;
+}
+
+.sobre section > img {
+  width: 100%;
+  height: 100%;
+}
+/* =========== Sobre =========== */
+/* =========== Planos =========== */
+.planos {
+  padding: 3rem 2rem;
+  width: 100%;
+  height: auto;
+}
+.planos section {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-content: center;
+  flex-flow: row wrap;
+}
+.planos section:nth-child(1) {
+  display: flex;
+  justify-content: flex-start;
+}
+.planos section > h1 {
+  margin: 3rem 0;
+}
+.planos .sect {
+  border: 3px solid var(--cor-1);
+  border-radius: 0.2rem;
+
+  padding: 1rem;
+  width: 16.5rem;
+  height: 23rem;
+}
+.planos .sect > h1 {
+  font-size: 1.8rem;
+  /* font-family: 'Koulen', cursive; */
+  padding: 0 0 1rem;
+  color: var(--cor-1);
+}
+.planos .sect > ul {
+  display: flex;
+
+  flex-flow: column;
+  gap: 1rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.planos .sect > ul i {
+  color: var(--cor-1);
+  margin: 0 0.3rem 0 0;
+}
+.sect a {
+  position: relative;
+
+  width: 100%;
+  text-align: center;
+  top: 2rem;
+}
+/* =========== Planos =========== */
+/* =========== Treinadores =========== */
+.treinadores {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  position: relative;
+
+  width: 100%;
+  height: auto;
+  padding: 3rem 2rem;
+}
+.treinadores > div {
+  display: flex;
+  width: 100%;
+}
+.treinadores h1 {
+  position: relative;
+  left: 0;
+  margin: 0 0 1rem;
+}
+.treinadores section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: wrap;
+
+  gap: 1rem;
+  width: 100%;
+  height: auto;
+}
+.treinadores .card {
+  width: 15rem;
+  height: auto;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: var(--cor-2);
+  border: 3px solid var(--cor-1);
+}
+.treinadores .card > img {
+  position: relative;
+  top: -1rem;
+  /* left: 1px; */
+  width: 14.62rem;
+  height: 14.6rem;
+}
+.cardText {
+  display: flex;
+  align-items: center;
+}
+.cardText span {
+  width: 50%;
+}
+.cardText h1 {
+  font-size: 0.8rem;
+  font-weight: normal;
+  text-transform: none;
+  font-family: 'Barlow', sans-serif;
+  border-bottom: 2px solid var(--cor-1);
+  /* border-width: 1rem; */
+  margin: 0 0 0.4rem 0;
+}
+.cardText h3 {
+  font-size: 1rem;
+}
+.cardText a {
+  background-color: var(--cor-1);
+  color: var(--cor-2);
+  padding: 0.35rem;
+  font-weight: 501;
+}
+.cardText a:hover {
+  color: #000;
+}
+/* =========== Treinadores =========== */
+/* =========== Contato =========== */
+.contato {
+  background-color: var(--cor-2);
+}
+.contato iframe {
+  width: 100%;
+  height: 80vh;
+}
+footer {
+  background-color: var(--cor-2);
+  display: flex;
+
+  justify-content: space-between;
+  position: relative;
+}
+.footerText {
+  display: flex;
+
+  gap: 2rem;
+  margin: 0 0 0 2rem;
+  padding: 1rem 0;
+}
+.footerText h1 {
+  font-family: 'Barlow', sans-serif;
+  font-size: 0.8rem;
+  text-transform: none;
+}
+.footerText h3 {
+  font-weight: normal;
+  font-size: 1rem;
+}
+footer > .footer-2 {
+  background: var(--cor-2);
+
+  position: absolute;
+  top: -25.8rem;
+  right: 5rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+.footer-2 form {
+  display: flex;
+
+  align-items: center;
+  gap: 1rem;
+  flex-flow: column;
+}
+.footer-2 textarea {
+  resize: none;
+}
+.footer-2 textarea,
+.footer-2 form input {
+  background-color: var(--cor-2);
+  color: var(--cor-3);
+  border: 2px solid var(--cor-1);
+  border-radius: 0.3rem;
+  padding: 0.3rem;
+  width: 100%;
+  outline: none;
+}
+.footer-2 form input::placeholder,
+.footer-2 textarea::placeholder {
+  text-transform: uppercase;
+  color: var(--cor-3);
+}
+.footer-2 textarea:focus,
+.footer-2 form input:focus {
+  color: var(--cor-3);
+}
+.footer-2 textarea::placeholder {
+  font-size: 0.95rem;
+}
+.footer-2 > h1 {
+  padding-bottom: 0.1rem;
+}
+.footer-2 button {
+  width: 100%;
+  border: none;
+  padding: 0.5rem;
+  text-transform: uppercase;
+  background: var(--cor-1);
+  border-radius: 0.3rem;
+  color: var(--cor-2);
+  cursor: pointer;
+}
+.footer-2 button:hover {
+  background-color: var(--cor-3);
+}
+.footer-2 .links {
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+  margin: 1rem 0 0 0;
+  gap: 1rem;
+}
+.links > ul {
+  display: flex;
+
+  justify-content: space-evenly;
+}
+/* =========== Contato =========== */
+/* =========== Pag 2 - Verifica =========== */
+.verifica {
+  background: url(../assets/img/bg2.jpg) no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  padding: 2rem;
+  width: 100%;
+  height: 100vh;
+}
+.verifica div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+
+  gap: 2rem;
+  background-color: var(--cor-2);
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+.verifica h1 {
+  font-family: 'Barlow', sans-serif;
+  text-transform: none;
+}
+.verifica a {
+  background-color: var(--cor-1);
+  color: var(--cor-2);
+
+  border-radius: 0.3rem;
+  padding: 1rem;
+  font-weight: 600;
+}
+.verifica a:hover {
+  background-color: var(--cor-3);
+}
+/* =========== Pag 2 - Verifica =========== */
